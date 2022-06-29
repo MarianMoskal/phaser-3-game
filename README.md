@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# phaser-3-game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My Fantasy: Make Your Story
+GDD TZ
 
-## Available Scripts
+Стак технологий:
 
-In the project directory, you can run:
+- You must use ​Phaser3 framework​ for UI
+- UI must be adaptable for mobile
+- (Extra) Adaptable for playable ads format will be a plus
 
-### `npm start`
+Посилання до App Store:
+https://apps.apple.com/us/app/id1491717191
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Опис:
+Гра основана на геймплеї My Fantasy: Make Your Story і використовує механіку вибору опцій.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Екрани:
+Інтро (анімація);
+Туторіал (оверлей);
+Геймплей (екран 1);
+Геймплей (екран 2);
+Геймплей (екран 3);
+Емейзінг скрін (анімація);
+Луз скрін (анімація);
+Енд карта.
 
-### `npm test`
+Вимоги:
+Довжина по часу: не менше 7 секунд від першого тапу.
+Довжина по тапах: не менше 4х тапів.
+Орієнтація екрану: горизонтальна \ вертикальна.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Інтро:
 
-### `npm run build`
+Програється швидка діалогова анімація в який на темному оверлеї з’являються іконка жіночого персонажа з текстовим блоком.
+Текстовий блок: “I received an invitation to the party!”
+Програється анімація здивування.
+Текстовий блок: “I need to prepare my appearance”.
+Програється анімація радості і знаходження ідеї.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Довжина по часу: 1, 5 секунд.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Туторіал:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+З'являється головний екран гри з темним оверлеєм.
+Без темного оверлея з’являється жіночий персонаж.
+Над темним оверлеєм з’являється текстовий блок: “Choose your appearance”.
+Без темного оверлея: іконка опції вибору 1 (плаття 1) та іконка опції вибору 2 (костюм 2).
+Над темним оверлеєм з’являється хінт поінтер, який почергово вказує на іконку опції вибору 1 (плаття 1) та на іконку опції вибору 2 (костюм 2).
+Якщо гравець тапає на будь-яку іконку опції вибору - то чорний оверлей; хінт поінтер та текстовий блок зникають. Іконки опції вибору змінюються на іконку опції вибору 1 (аксесуар 1) та на іконку опції вибору 2 (аксесуар 2).
+Починається основний геймплей.
 
-### `npm run eject`
+Основний геймплей:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Гравець почергово вибирає з 2х опіцій вибору декоративні елементи. Ці елементи відображаються з анімацією на персонажу після вибру гравця. Після відображення іконки опції вибору змінюються на наступні.
+Ігровий прогрес відображається на прогрес барі. Прогрес бар має 4 ділення.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Екран 1: гравець обирає аксесуари 1-2;
+Екран 2: гравець обирає аксесуари 3-4;
+Екран 2: гравець обирає мейкап 1-2.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+При кожному виборі гравця програється анімація радості персонажа.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Якщо гравець не обирає з опції вибору після 2х секунд з’являється хінт поінтер, що почергово показує на опції вибору.
 
-## Learn More
+Після останнього вибору гравцю демонструється Емейзінг Скрін (анімація) або Луз Скрін;
+В цій анімації жіночий персонаж зі результатом виборів зустрічається разом з чоловічим персонажем на вечірці в клубі.
+Чоловічий персонаж в кежуал костюмі.
+В залежності від початкового вибору гравця гра демонструє або Емейзінг Скрін з Енд картою або Луз Скрін.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Емейзінг скрін (залежить від модифікації):
+Якщо вибране плаття 1.
+Компоненти:
+Жіночий персонаж;
+Чоловічий персонаж з текстовим блоком “You are beautiful!”
+Анімація радості жіночого персонажа;
+Бекграунд;
+Партікли.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Луз Скрін:
+Якщо вибраний костюм 2.
+Компоненти:
+Жіночий персонаж;
+Чоловічий персонаж з текстовим блоком “What a weird appearance!”
+Анімація суму жіночого персонажа;
+Бекграунд;
 
-### Code Splitting
+Після анімації з’являється чорний оверлей.
+Певерх оверлею анімована кнопка ретраю.
+Текстовий блок “Retry!”
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Нотаток: Будь який тап на Ретрай Скріні відправляє гравця в магазин.
 
-### Analyzing the Bundle Size
+Енд карта:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Компоненти:
+Текстовий блок: “ Swipe to play!”;
+Бекграунд;
+Анімовані стрілки що показують свайп рух.
 
-### Making a Progressive Web App
+Нотаток: Будь який тап чи свайп на Енд карті відправляє гравця в магазин.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Нотаток: SQ - Super Quick - перехід в магазин на певному тапі (взаємодії) з грою без анімацій чи Енд карти.
+Нотаток: Повна гра - це повний геймплей з Позитивним підтвердженням та Енд картою.
 
-### Advanced Configuration
+Модифікації:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Повна гра з інтро
 
-### Deployment
+Матеріали:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+https://www.figma.com/file/yDojHDNdQde7hqAFBEdxEa/playable-ads_for-TZ?node-id=275%3A47
 
-### `npm run build` fails to minify
+PSD characters:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://drive.google.com/drive/folders/1EEmFwitMcX0_GhpwX7_PDwxR-t7o_NLg?usp=sharing
+
+Рефенс:
+
+https://drive.google.com/drive/folders/1tDhhBHh6bSwOfvlwl6IoK5FQv8La28aN?usp=sharing
